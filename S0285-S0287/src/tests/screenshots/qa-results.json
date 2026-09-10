@@ -1,0 +1,57 @@
+[
+  {
+    "viewport": 360,
+    "width": 360,
+    "scroll": 345,
+    "overflows": [],
+    "h1": 1,
+    "sections": 13,
+    "brokenLinks": []
+  },
+  {
+    "viewport": 768,
+    "width": 768,
+    "scroll": 753,
+    "overflows": [],
+    "h1": 1,
+    "sections": 13,
+    "brokenLinks": []
+  },
+  {
+    "viewport": 1024,
+    "width": 1024,
+    "scroll": 1009,
+    "overflows": [],
+    "h1": 1,
+    "sections": 13,
+    "brokenLinks": []
+  },
+  {
+    "viewport": 1440,
+    "width": 1440,
+    "scroll": 1425,
+    "overflows": [],
+    "h1": 1,
+    "sections": 13,
+    "brokenLinks": []
+  },
+  {
+    "reducedMotion": "PASS",
+    "faq": "PASS",
+    "assistant": "PASS",
+    "packageSelection": "PASS",
+    "form": "PASS",
+    "mobileMenu": "PASS"
+  },
+  {
+    "keyboardFAQ": "PASS",
+    "invalidFieldFormats": "PASS",
+    "saveData": "PASS",
+    "noJavaScript": "PASS",
+    "videoPlayback": "PASS",
+    "videoOffscreenPause": "PASS",
+    "videoFallback": "PASS",
+    "privateSources": "PASS",
+    "runtimeErrors": []
+  }
+]
