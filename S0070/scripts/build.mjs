@@ -1,8 +1,8 @@
 import { mkdir, writeFile, copyFile, rm } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { content as c, media } from '../src/content.mjs';
-import { articleList, arrow, buttonLink, escapeHtml as esc, heroMedia, responsiveFigure, sectionLabel as label } from '../src/components.mjs';
+import { content as c, media, heroSlides } from '../src/content.mjs';
+import { articleList, arrow, buttonLink, escapeHtml as esc, heroCarousel, responsiveFigure, sectionLabel as label } from '../src/components.mjs';
 import { agentConfig } from '../src/agent-config.mjs';
 import { serviceSchemaJson } from '../src/seo.mjs';
 
@@ -24,38 +24,40 @@ const html = `<!doctype html>
   ${headCanonical}
   <script type="application/ld+json">${serviceSchemaJson}</script>
   <link rel="icon" href="./media/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css"><script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./styles.css"><script src="./app.js" defer></script><script src="./hero.js" defer></script>
 </head>
 <body id="dau-trang">
 <a class="skip" href="#noi-dung">Chuyển đến nội dung chính</a>
-<header class="header">
+<header class="header dark">
   <div class="container header-inner">
     <a class="brand" href="#dau-trang" aria-label="GASCOLAE — về đầu trang"><img src="./media/${media.brand.file}" width="${media.brand.width}" height="${media.brand.height}" alt="" decoding="async"><span>GASCOLAE</span></a>
-    <span class="service-tag">S0070 <span>/</span> UAV & SPECTRAL AI</span>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
     <nav id="navigation" aria-label="Điều hướng chính">
       ${c.navigation.map(item => `<a href="${esc(item.href)}">${esc(item.text)}</a>`).join('')}
-      ${buttonLink('Trao đổi nhu cầu', '#lien-he', 'compact')}
+      ${buttonLink('Trao đổi nhu cầu', '#lien-he', 'compact secondary')}
     </nav>
   </div>
 </header>
 <main id="noi-dung" tabindex="-1">
   <section class="hero dark" aria-labelledby="hero-title">
-    <div class="container hero-grid">
+    ${heroCarousel(heroSlides, media)}
+    <div class="container hero-stage">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> S0070 / KHẢO SÁT & GIÁM SÁT QUANG PHỔ</p>
-        <h1 id="hero-title">Phát hiện bất thường bằng <em>UAV quang phổ & AI</em></h1>
+        <p class="eyebrow">S0070 / KHẢO SÁT & GIÁM SÁT QUANG PHỔ</p>
+        <h1 id="hero-title">${esc(c.hero.title).replace('\n', '<br>')}</h1>
         <p class="hero-description">${esc(c.hero.text)}</p>
         <div class="hero-actions">${buttonLink('Trao đổi nhu cầu')}${buttonLink('Xem các cấp độ dịch vụ', '#cap-do', 'secondary')}</div>
         <p class="review-note"><span aria-hidden="true">⊙</span> ${esc(c.hero.review)}</p>
       </div>
-      <figure class="hero-media">
-        <div class="media-top"><span>SPECTRAL DATA CUBE</span><span>RGB / MSI / HSI</span></div>
-        ${heroMedia(media.hero)}
-        <figcaption><span class="legend-dot" aria-hidden="true"></span> Dữ liệu phổ <span class="legend-dot amber" aria-hidden="true"></span> Vùng khác biệt <span class="illustration">Hình minh họa</span></figcaption>
-      </figure>
     </div>
-    <div class="container hero-bottom"><span>THU NHẬN</span><b>RGB + MSI / HSI</b><span>ĐỐI CHIẾU</span><b>GIS & orthomosaic</b><span>KIỂM CHỨNG</span><b>Human-in-the-loop</b></div>
+    <div class="container hero-footer">
+      <span class="hero-caption">Hình minh họa</span>
+      <div class="hero-controls" hidden aria-label="Điều khiển ảnh hero">
+        <div class="hero-selectors">${heroSlides.map((slide, i) => `<button type="button" class="hero-selector${i === 0 ? ' is-active' : ''}" data-slide="${i}" aria-controls="hero-scene-${i}" aria-current="${i === 0 ? 'true' : 'false'}"><span class="hero-number">0${i + 1}</span><span>${esc(slide.label)}</span><span class="hero-progress" aria-hidden="true"></span></button>`).join('')}</div>
+        <button type="button" class="hero-play" aria-label="Tạm dừng trình chiếu">Tạm dừng</button>
+      </div>
+      <span class="sr-only hero-status" role="status" aria-live="polite"></span>
+    </div>
   </section>
 
   <section class="section problems container" aria-labelledby="problem-title">
@@ -133,7 +135,7 @@ const html = `<!doctype html>
 <footer class="footer dark"><div class="container footer-main"><a class="wordmark" href="#dau-trang" aria-label="GASCOLAE — về đầu trang"><img src="./media/${media.brand.file}" width="${media.brand.width}" height="${media.brand.height}" alt="" loading="lazy" decoding="async"><span>GASCOLAE</span></a><p>${esc(c.footer.descriptor).replace('\n','<br>')}</p><a href="#dau-trang">Về đầu trang ↑</a></div><div class="container footer-bottom"><span>GASCOLAE / S0070</span><span>${esc(c.footer.notice)}</span></div></footer>
 </body></html>`;
 await writeFile(path.join(out, 'index.html'), html);
-for (const name of ['styles.css', 'app.js']) await copyFile(path.join(root, 'src', name), path.join(out, name));
+for (const name of ['styles.css', 'app.js', 'hero.js']) await copyFile(path.join(root, 'src', name), path.join(out, name));
 const mediaFiles = [...new Set(Object.values(media).flatMap(asset => [asset.file, asset.small, asset.video]).filter(Boolean))];
 for (const name of mediaFiles) await copyFile(path.join(root, 'assets/web', name), path.join(out, 'media', name));
 await copyFile(path.join(root, 'src/favicon.svg'), path.join(out, 'media/favicon.svg'));

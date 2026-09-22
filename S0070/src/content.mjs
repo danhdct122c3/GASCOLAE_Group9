@@ -8,8 +8,8 @@ export const content = {
   },
   hero: {
     source: '09 §1, §3; 01 §1, §5; 02 §1, §4',
-    title: 'Phát hiện bất thường bằng UAV quang phổ & AI',
-    text: 'Sàng lọc khu vực quốc phòng-an ninh bằng RGB + MSI/HSI, GIS và AI để khoanh vùng điểm nghi vấn, hỗ trợ phân tích vật liệu và chuyên gia xác minh.',
+    title: 'Thấy khác biệt.\nHiểu sâu hơn.',
+    text: 'UAV quang phổ & AI hỗ trợ khoanh vùng bất thường, bổ sung dữ liệu để chuyên gia rà soát và xác minh.',
     review: 'AI hỗ trợ sàng lọc. Chuyên gia rà soát và lực lượng có thẩm quyền xác minh trước khi sử dụng kết quả.'
   },
   navigation: [
@@ -91,14 +91,16 @@ export const content = {
   }
 };
 
-// Reviewed illustration: conceptual terrain cube, no real coordinates or sensitive facilities.
+// Conceptual illustrations, not live survey data.
 export const media = {
   brand: { file: 'brand-mark.png', width: 189, height: 160,
     original: 'LOGO_no-bg.png', alt: 'Biểu tượng GASCOLAE: UAV kết hợp hình lá cây.' },
-  hero: { file: 'spectral-cube.webp', small: 'spectral-cube-640.webp', width: 1024, height: 765,
+  hero: { file: 'spectral-site-overview.webp', small: 'spectral-site-overview-640.webp', width: 1024, height: 687,
     video: null,
-    original: '3f1dcf5f-e9ab-469a-b3f4-8369d7af0132.jpg',
-    alt: 'Minh họa khối dữ liệu phổ: các lớp phổ bên dưới một bề mặt địa hình giả lập.' },
+    original: '9c4423a6-3b16-497a-be19-b42eba3afb70.jpg',
+    alt: 'Cảnh quan giả lập nhìn từ trên cao, với lưới phân tích quang phổ và các vùng khác biệt được đánh dấu.' },
+  spectral: { file: 'spectral-cube.webp', small: 'spectral-cube-640.webp', width: 1024, height: 765,
+    alt: 'Khối dữ liệu phổ minh họa các lớp thông tin bên dưới địa hình.' },
   workflow: { file: 'service-workflow.webp', width: 1024, height: 572,
     original: '1e9176bd-7b53-4031-b6ef-ba7e35d5422c.jpg',
     alt: 'Minh họa chuỗi UAV, dữ liệu phổ, bản đồ GIS và chuyên gia rà soát.' },
@@ -112,3 +114,9 @@ export const media = {
     original: 'b959b0a0-e7d4-4a96-adfe-b08809ff5f0f.jpg',
     alt: 'Minh họa UAV khảo sát phía trên cảnh quan với các vùng dữ liệu quang phổ.', caption: 'Hình minh họa hoạt động khảo sát và giám sát bằng UAV.' }
 };
+
+export const heroSlides = [
+  { media: 'hero', label: 'Khảo sát', crop: 'terrain' },
+  { media: 'sensor', label: 'Thu nhận', crop: 'sensor' },
+  { media: 'spectral', label: 'Phân tích', crop: 'spectral' }
+];

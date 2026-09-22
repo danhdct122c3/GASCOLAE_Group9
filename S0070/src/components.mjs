@@ -18,12 +18,15 @@ export function articleList(items, className = '') {
   return items.map((item, index) => `<article class="${escapeHtml(className)}"><span class="index" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p></article>`).join('');
 }
 
-export function heroMedia(asset) {
-  const poster = `./media/${escapeHtml(asset.file)}`;
-  if (asset.video) {
-    return `<video poster="${poster}" width="${asset.width}" height="${asset.height}" muted loop playsinline preload="none" data-src="./media/${escapeHtml(asset.video)}" aria-label="${escapeHtml(asset.alt)}"><img src="${poster}" width="${asset.width}" height="${asset.height}" alt="${escapeHtml(asset.alt)}"></video>`;
-  }
-  return `<img src="${poster}" srcset="./media/${escapeHtml(asset.small)} 640w, ${poster} 1024w" sizes="(max-width: 800px) 92vw, 48vw" width="${asset.width}" height="${asset.height}" alt="${escapeHtml(asset.alt)}" fetchpriority="high" decoding="async">`;
+export function heroCarousel(slides, assets) {
+  return `<div class="hero-scenes">${slides.map((slide, i) => {
+    const asset = assets[slide.media];
+    const sources = `./media/${escapeHtml(asset.small)} 640w, ./media/${escapeHtml(asset.file)} 1024w`;
+    const source = i === 0
+      ? `src="./media/${escapeHtml(asset.file)}" srcset="${sources}" fetchpriority="high"`
+      : `data-src="./media/${escapeHtml(asset.file)}" data-srcset="${sources}"`;
+    return `<figure id="hero-scene-${i}" class="hero-scene${i === 0 ? ' is-active' : ''}" data-crop="${escapeHtml(slide.crop)}" aria-hidden="${i !== 0}"><img ${source} sizes="100vw" width="${asset.width}" height="${asset.height}" alt="${escapeHtml(asset.alt)}" decoding="async"></figure>`;
+  }).join('')}</div>`;
 }
 
 export function responsiveFigure(asset, className = '') {

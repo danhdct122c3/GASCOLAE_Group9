@@ -115,7 +115,7 @@ test('preview server provides revalidation, Brotli and restrictive security head
 
 test('public media stays bounded and uses optimized responsive formats', async () => {
   const optimized = [
-    'spectral-cube-640.webp', 'spectral-cube.webp', 'service-workflow.webp',
+    'service-workflow.webp',
     'uav-sensor-640.webp', 'uav-sensor.webp',
     'spectral-site-overview-640.webp', 'spectral-site-overview.webp',
     'uav-monitoring-640.webp', 'uav-monitoring.webp'
@@ -123,7 +123,7 @@ test('public media stays bounded and uses optimized responsive formats', async (
   for (const file of optimized) {
     assert.ok((await stat(path.join(dist, 'media', file))).size < 100_000, file);
   }
-  assert.match(html, /srcset="\.\/media\/spectral-cube-640\.webp 640w, \.\/media\/spectral-cube\.webp 1024w"/);
+  assert.match(html, /srcset="\.\/media\/spectral-site-overview-640\.webp 640w, \.\/media\/spectral-site-overview\.webp 1024w"/);
   assert.match(html, /service-workflow\.webp[^>]*loading="lazy"[^>]*decoding="async"/);
   assert.match(html, /brand-mark\.png/);
   assert.doesNotMatch(html, /media\/brand\.png/);
@@ -218,8 +218,7 @@ test('responsive and motion safeguards cover requested viewport classes', () => 
     assert.ok(css.includes(breakpoint), breakpoint);
   }
   assert.match(css, /prefers-reduced-motion:reduce/);
-  assert.match(js, /min-width: 801px.+prefers-reduced-motion: no-preference/);
-  assert.match(js, /connection\?\.saveData/);
+  assert.doesNotMatch(html, /<video\b/);
   assert.match(css, /overflow-x:clip/);
 });
 

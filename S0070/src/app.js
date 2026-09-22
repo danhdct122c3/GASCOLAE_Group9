@@ -36,20 +36,6 @@ document.querySelectorAll('details').forEach(details => {
   details.addEventListener('toggle', syncExpanded);
 });
 
-// Keep the poster on constrained devices; only desktop users who accept motion
-// and are not using data saver download the optional hero video.
-const videoQuery = window.matchMedia('(min-width: 801px) and (prefers-reduced-motion: no-preference)');
-const saveData = globalThis.navigator?.connection?.saveData === true;
-if (videoQuery.matches && !saveData) {
-  document.querySelectorAll('video[data-src]').forEach(video => {
-    const source = document.createElement('source');
-    source.src = video.dataset.src;
-    source.type = 'video/mp4';
-    video.append(source);
-    video.play().catch(() => {});
-  });
-}
-
 const form = document.querySelector('#lead-form');
 const status = document.querySelector('#form-status');
 const review = document.querySelector('#review-lead');
