@@ -1,0 +1,21 @@
+/* ==========================================================================
+   GASCOLAE S0143 MASTER STYLESHEET
+   ========================================================================== */
+
+/* 1. Design Tokens & Core Variables */
+@import url('./tokens.css');
+
+/* 2. Base Resets & Global Utilities */
+@import url('./base.css');
+
+/* 3. Specialized Layout Components */
+@import url('./components/navbar.css');
+@import url('./components/hero.css');
+@import url('./components/crisis.css');
+@import url('./components/simulator.css');
+@import url('./components/capabilities.css');
+@import url('./components/process.css');
+@import url('./components/packages.css');
+@import url('./components/faq.css');
+@import url('./components/form.css');
+@import url('./components/footer.css');

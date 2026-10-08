@@ -521,7 +521,7 @@
             </ul>
 
             <div class="pricing-action">
-              <a href="#lien-he" class="btn btn-outline">Liên hệ tư vấn</a>
+              <a href="#lien-he" class="btn btn-outline" data-select-level="level-1">Liên hệ tư vấn</a>
             </div>
           </div>
 
@@ -547,7 +547,7 @@
             </ul>
 
             <div class="pricing-action">
-              <a href="#lien-he" class="btn btn-accent">Liên hệ tư vấn</a>
+              <a href="#lien-he" class="btn btn-accent" data-select-level="level-2">Liên hệ tư vấn</a>
             </div>
           </div>
 
@@ -571,7 +571,7 @@
             </ul>
 
             <div class="pricing-action">
-              <a href="#lien-he" class="btn btn-outline">Liên hệ tư vấn</a>
+              <a href="#lien-he" class="btn btn-outline" data-select-level="level-3">Liên hệ tư vấn</a>
             </div>
           </div>
         </div>
@@ -856,44 +856,58 @@
 
           <form id="leadForm">
             <div class="form-grid">
+              <!-- 1. Họ và tên -->
               <div class="form-group">
-                <label class="form-label">Họ và tên <span class="req">*</span></label>
-                <input type="text" name="fullName" class="form-control" placeholder="Nguyễn Văn A" required>
+                <label class="form-label" for="fullName">Họ và tên <span class="req">*</span></label>
+                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Ví dụ: Nguyễn Văn A" required>
               </div>
 
+              <!-- 2. Đơn vị/ Doanh nghiệp -->
               <div class="form-group">
-                <label class="form-label">Cơ quan / Đơn vị công tác <span class="req">*</span></label>
-                <input type="text" name="organization" class="form-control" placeholder="Sở TN&MT / Ban Quản lý KCN..." required>
+                <label class="form-label" for="organization">Đơn vị / Doanh nghiệp <span class="req">*</span></label>
+                <input type="text" id="organization" name="organization" class="form-control" placeholder="Ví dụ: Sở TN&MT / Tập đoàn X / BQL KCN..." required>
               </div>
 
+              <!-- 3. Số điện thoại (SĐT) -->
               <div class="form-group">
-                <label class="form-label">Email công vụ <span class="req">*</span></label>
-                <input type="email" name="email" class="form-control" placeholder="nguyenvana@company.com" required>
+                <label class="form-label" for="phone">Số điện thoại (SĐT) <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Ví dụ: 0912 345 678" required>
               </div>
 
+              <!-- 4. Level -->
               <div class="form-group">
-                <label class="form-label">Số điện thoại <span class="req">*</span></label>
-                <input type="tel" name="phone" class="form-control" placeholder="0912 345 678" required>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label">Địa bàn / Diện tích dự kiến khảo sát (ha)</label>
-                <input type="number" name="area" class="form-control" placeholder="Ví dụ: 80" min="1">
-              </div>
-
-              <div class="form-group">
-                <label class="form-label">Nhu cầu trọng tâm</label>
-                <select name="serviceDemand" class="form-control">
-                  <option value="hotspot">Khảo sát & Khoanh vùng Hotspot (Level 2)</option>
-                  <option value="basic">Khảo sát nồng độ cơ bản (Level 1)</option>
-                  <option value="gpc">Giám sát tích hợp & Đối chiếu GPC (Level 3)</option>
-                  <option value="other">Tư vấn chuyên sâu theo dự án</option>
+                <label class="form-label" for="levelSelect">Level (Gói dịch vụ) <span class="req">*</span></label>
+                <select name="level" id="levelSelect" class="form-control" required>
+                  <option value="" disabled selected>-- Chọn Level dịch vụ --</option>
+                  <option value="level-1">Level 1 - Khảo sát cơ bản (CO₂ / CH₄)</option>
+                  <option value="level-2">Level 2 - Bản đồ không gian & Hotspot (Phổ biến)</option>
+                  <option value="level-3">Level 3 - Giám sát tích hợp & Đối chiếu GPC</option>
+                  <option value="custom">Tư vấn lựa chọn Level phù hợp</option>
                 </select>
               </div>
 
+              <!-- 5. Email -->
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Ví dụ: nguyenvana@company.com" required>
+              </div>
+
+              <!-- 6. Diện tích -->
+              <div class="form-group">
+                <label class="form-label" for="area">Diện tích dự kiến (ha) <span class="req">*</span></label>
+                <input type="number" id="area" name="area" class="form-control" placeholder="Ví dụ: 80" min="1" step="any" required>
+              </div>
+
+              <!-- 7. Địa bàn -->
               <div class="form-group full-width">
-                <label class="form-label">Mục tiêu & Yêu cầu chi tiết</label>
-                <textarea name="notes" class="form-control" placeholder="Mô tả tóm tắt mục đích khảo sát, địa bàn, thời gian triển khai mong muốn..."></textarea>
+                <label class="form-label" for="location">Địa bàn khảo sát <span class="req">*</span></label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="Ví dụ: Quận Cầu Giấy, TP. Hà Nội / KCN Long Thành, Tỉnh Đồng Nai..." required>
+              </div>
+
+              <!-- 8. Mô tả chung -->
+              <div class="form-group full-width">
+                <label class="form-label" for="notes">Mô tả chung</label>
+                <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Mô tả chung về nhu cầu, đặc điểm hiện trường khảo sát, mốc tiến độ mong muốn hoặc các yêu cầu kỹ thuật đặc thù..."></textarea>
               </div>
             </div>
 

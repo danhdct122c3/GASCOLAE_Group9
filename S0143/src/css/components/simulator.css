@@ -1,0 +1,359 @@
+/* ==========================================================================
+   INTERACTIVE DUAL-VISION & FLOOD DEPTH SIMULATOR CONSOLE (LIGHT THEME)
+   ========================================================================== */
+
+.simulator-section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.simulator-container {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+/* Console Header & Tabs */
+.simulator-console-header {
+  background: #f8fafc;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.console-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.console-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cyan-600);
+}
+
+.simulator-tabs {
+  display: flex;
+  gap: 8px;
+  background: #e2e8f0;
+  padding: 4px;
+  border-radius: var(--radius-pill);
+}
+
+.sim-tab-btn {
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sim-tab-btn:hover {
+  color: #0f172a;
+}
+
+.sim-tab-btn.active {
+  background: var(--rescue-orange);
+  color: #ffffff;
+  box-shadow: 0 2px 8px var(--rescue-orange-glow);
+}
+
+/* Console Body */
+.simulator-body {
+  padding: 28px;
+}
+
+.sim-view-panel {
+  display: none;
+}
+
+.sim-view-panel.active {
+  display: block;
+}
+
+/* TAB 1: Image Comparison Slider (Optical vs Thermal FLIR) */
+.comparison-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  user-select: none;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-medium);
+}
+
+.comparison-image-before,
+.comparison-image-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.comparison-overlay-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-right: 3px solid #ffffff;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.comparison-overlay-after .comparison-image-after {
+  width: 100%;
+  min-width: 1000px;
+}
+
+/* Slider Handle */
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rescue-orange);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 20px var(--rescue-orange-glow), 0 4px 10px rgba(0,0,0,0.3);
+  cursor: ew-resize;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.slider-handle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Comparison Labels */
+.slider-badge-label {
+  position: absolute;
+  bottom: 24px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+
+.label-optical {
+  right: 24px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.label-thermal {
+  left: 24px;
+  background: rgba(234, 88, 12, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Tab 1 Telemetry Bar */
+.sim-telemetry-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  background: #f8fafc;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.sim-telem-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sim-telem-lbl {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sim-telem-val {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* TAB 2: Flood Depth Simulation (DEM/DSM) */
+.depth-sim-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+}
+
+.depth-map-display {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 480px;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.depth-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.depth-controls-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.depth-level-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.depth-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.depth-btn:hover {
+  border-color: var(--cyan-600);
+  background: #f0f9ff;
+}
+
+.depth-btn.active {
+  border-color: var(--rescue-orange);
+  background: #fff7ed;
+  box-shadow: 0 0 15px rgba(234, 88, 12, 0.15);
+}
+
+.depth-btn-info strong {
+  display: block;
+  font-size: 15px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.depth-btn-info span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.depth-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.badge-warning { background: #fef3c7; color: #b45309; }
+.badge-danger { background: #fee2e2; color: #b91c1c; }
+.badge-critical { background: #ffedd5; color: #c2410c; }
+
+.depth-impact-box {
+  background: #ffffff;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.depth-impact-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--cyan-600);
+  font-weight: 700;
+}
+
+.depth-impact-desc {
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .depth-sim-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-slider-wrapper {
+    height: 380px;
+  }
+  .depth-map-display {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .simulator-console-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .simulator-tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sim-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .sim-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
