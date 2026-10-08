@@ -101,18 +101,16 @@ textarea.form-control {
   font-size: 16px;
 }
 
-/* Form Success Toast */
 .form-toast {
   display: none;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 24px 20px;
   margin-top: 24px;
   text-align: center;
-  color: #065f46;
-  font-weight: 600;
-  font-size: 15px;
+  color: #14532d;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.12);
 }
 
 .form-toast.show {

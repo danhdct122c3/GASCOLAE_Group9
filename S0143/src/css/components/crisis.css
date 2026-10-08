@@ -1,0 +1,226 @@
+/* ==========================================================================
+   SITUATION ROOM: CRISIS vs. CAPABILITIES (LIGHT THEME)
+   ========================================================================== */
+
+.situation-section {
+  background-color: #f8fafc;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bento Matrix Layout */
+.crisis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.crisis-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+.crisis-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+/* Media Illustration Box */
+.crisis-media {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.crisis-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.crisis-card:hover .crisis-media img {
+  transform: scale(1.05);
+}
+
+.crisis-media-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.crisis-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.crisis-tag.alert {
+  background: rgba(254, 242, 242, 0.92);
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.crisis-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: #dc2626;
+}
+
+/* Card Body */
+.crisis-body {
+  padding: 28px 30px 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.crisis-card-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.crisis-card-desc {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Solution Box Inside Crisis Card */
+.solution-resolution-box {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-top: auto;
+}
+
+.solution-resolution-box .sol-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--cyan-600);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.solution-resolution-box .sol-text {
+  font-size: 13.5px;
+  color: #1e293b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Solution Overview Callout Banner */
+.solution-callout-banner {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #7dd3fc;
+  border-radius: var(--radius-card);
+  padding: 40px;
+  margin-top: 48px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-callout-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--rescue-orange);
+}
+
+.callout-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.callout-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.callout-body {
+  font-size: 15.5px;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.callout-legal-disclaimer {
+  background: #fff7ed;
+  border: 1px dashed #fdba74;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: #9a3412;
+}
+
+.callout-legal-disclaimer svg {
+  flex-shrink: 0;
+  color: var(--rescue-orange);
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .crisis-grid {
+    grid-template-columns: 1fr;
+  }
+  .crisis-media {
+    height: 190px;
+  }
+  .crisis-body {
+    padding: 24px 20px;
+  }
+  .solution-callout-banner {
+    padding: 24px;
+  }
+}

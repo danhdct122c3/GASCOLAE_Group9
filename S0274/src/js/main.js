@@ -103,9 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Lead Form Submission Handling
+  // 4. Lead Form Submission Handling & Pricing Level Pre-selection
   const leadForm = document.getElementById('leadForm');
   const formToast = document.getElementById('formToast');
+  const levelSelect = document.getElementById('levelSelect');
+
+  // Handle Level pre-selection from Pricing Cards
+  document.querySelectorAll('[data-select-level]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selectedLevel = btn.getAttribute('data-select-level');
+      if (levelSelect && selectedLevel) {
+        levelSelect.value = selectedLevel;
+      }
+    });
+  });
 
   if (leadForm) {
     leadForm.addEventListener('submit', (e) => {
@@ -114,20 +125,35 @@ document.addEventListener('DOMContentLoaded', () => {
       // Collect data
       const formData = new FormData(leadForm);
       const name = formData.get('fullName');
+      const org = formData.get('organization');
+      const location = formData.get('location');
+      const area = formData.get('area');
+      const levelText = levelSelect && levelSelect.selectedIndex > 0 ? levelSelect.options[levelSelect.selectedIndex]?.text : '';
 
       // Show toast
       if (formToast) {
-        formToast.innerHTML = `<strong>Cảm ơn ${name || 'Quý khách'}!</strong> Yêu cầu khảo sát & tư vấn kỹ thuật của bạn đã được chuyển tới Đội ngũ Chuyên gia Khí hậu GASCOLAE. Chúng tôi sẽ liên hệ lại trong vòng 24 giờ làm việc.`;
+        formToast.innerHTML = `
+          <div style="font-size: 26px; margin-bottom: 6px;">✅</div>
+          <div style="font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #15803d;">Gửi yêu cầu tư vấn thành công!</div>
+          <p style="font-size: 14.5px; font-weight: 500; margin-bottom: 6px; color: #166534;">
+            Cảm ơn <strong>${name || 'Quý khách'}</strong> (${org || 'Đơn vị'}) đã gửi thông tin yêu cầu khảo sát Dịch vụ S0274.
+          </p>
+          <div style="font-size: 13.5px; color: #15803d; line-height: 1.5;">
+            📍 Địa bàn: <strong>${location || 'Đã ghi nhận'}</strong> | 📐 Quy mô: <strong>${area ? area + ' ha' : 'Theo khảo sát'}</strong>${levelText ? ' | 📋 <strong>' + levelText + '</strong>' : ''}<br>
+            Đội ngũ Kỹ thuật & Chuyên gia Khí hậu GASCOLAE sẽ liên hệ lại qua SĐT/Email trong vòng 24 giờ làm việc.
+          </div>
+        `;
         formToast.classList.add('show');
+        formToast.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
 
       // Reset form
       leadForm.reset();
 
-      // Auto hide toast after 8s
+      // Auto hide toast after 10s
       setTimeout(() => {
         formToast?.classList.remove('show');
-      }, 8000);
+      }, 10000);
     });
   }
 

@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Platform Metadata (Mục 14) -->
+  <title>Giám Sát Ngập Lụt & Cứu Nạn Tự Động Bằng UAV (S0143) | GASCOLAE</title>
+  <meta name="description" content="Giải pháp UAV cứu hộ lũ lụt S0143 của GASCOLAE: Lập bản đồ độ sâu ngập, định vị người mắc kẹt bằng camera nhiệt và thả hàng cứu trợ khẩn cấp. Kích hoạt ứng trực 24/7.">
+  <meta name="keywords" content="giám sát ngập lụt bằng UAV, cứu nạn lũ lụt bằng UAV, drone tìm kiếm cứu nạn, bản đồ độ sâu ngập lụt, thả hàng cứu trợ bằng drone, UAV cứu hộ khẩn cấp S0143">
+  <meta name="author" content="GASCOLAE PLATFORM">
+  <link rel="icon" type="image/png" href="../assets/logo/LOGO_no-bg.png">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Giám Sát Ngập Lụt & Cứu Nạn Tự Động Bằng UAV (S0143)">
+  <meta property="og:description" content="Chủ động ứng phó thiên tai: Bóc tách ranh giới ngập lũ, mô phỏng độ sâu dòng chảy, dẫn đường sơ tán an toàn và trực tiếp thả nhu yếu phẩm sống còn bằng UAV.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/hero_drone_flood.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Modular Stylesheet -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. FULL-WIDTH EDGE-TO-EDGE NAVBAR
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="navbar-container">
+      <!-- Brand Logo -->
+      <a href="#" class="navbar-brand">
+        <img src="../assets/logo/LOGO_no-bg.png" alt="GASCOLAE Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation Links (Concise, single line) -->
+      <nav class="navbar-nav">
+        <a href="#thuc-trang" class="nav-link">Thực trạng</a>
+        <a href="#mo-phong" class="nav-link">Mô phỏng</a>
+        <a href="#nang-luc" class="nav-link">Năng lực</a>
+        <a href="#quy-trinh" class="nav-link">Quy trình</a>
+        <a href="#goi-dich-vu" class="nav-link">Gói dịch vụ</a>
+        <a href="#faq" class="nav-link">Hỏi đáp</a>
+      </nav>
+
+      <!-- Actions: Hotline & Primary CTA -->
+      <div class="navbar-actions">
+        <a href="tel:1900888999" class="hotline-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>1900 888 999</span>
+        </a>
+        <a href="#dang-ky" class="btn btn-primary btn-sm">Yêu cầu Khảo sát</a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION + LIVE TACTICAL HUD (Mục 1)
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Continuous Background Video -->
+      <video class="hero-video-bg" autoplay loop muted playsinline poster="../assets/images/hero_drone_flood.jpg">
+        <source src="../assets/video_S0143.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+        <!-- Centered Concise Hero Content -->
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="pulse-dot pulse-orange"></span>
+            <span>Dịch vụ S0143 • Giám sát & Cứu nạn Lũ lụt Tự động</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Giám sát ngập lụt & cứu nạn tự động bằng <span class="highlight-gradient">UAV</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Ứng dụng UAV công nghiệp, AI và GIS để trinh sát lũ lụt diện rộng, tầm soát thân nhiệt ban đêm và tiếp tế cứu trợ khẩn cấp vào vùng cô lập.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#dang-ky" class="btn btn-primary btn-lg" id="heroPrimaryCta">
+              <span>Yêu cầu Tư vấn Tác chiến</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#mo-phong" class="btn btn-outline-white btn-lg" id="heroSecondaryCta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Xem Mô phỏng Hiện trường</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SITUATION ROOM: NÚT THẮT HIỆN TRƯỜNG & LỜI GIẢI (Mục 2, 3, 4)
+         ====================================================================== -->
+    <section id="thuc-trang" class="section situation-section">
+      <div class="container">
+        <!-- 4 Operational Specs Banner (Chuyển giao mượt mà từ Hero) -->
+        <!-- <div class="specs-trust-banner">
+          <div class="specs-trust-item">
+            <span class="specs-trust-val">IP55 / 12m/s</span>
+            <span class="specs-trust-lbl">Kháng mưa bão & gió lớn</span>
+          </div>
+          <div class="specs-trust-item">
+            <span class="specs-trust-val">&lt; 3cm/px</span>
+            <span class="specs-trust-lbl">Độ phân giải ảnh Orthomosaic</span>
+          </div>
+          <div class="specs-trust-item">
+            <span class="specs-trust-val">FLIR 30Hz</span>
+            <span class="specs-trust-lbl">Camera nhiệt tầm soát đêm</span>
+          </div>
+          <div class="specs-trust-item">
+            <span class="specs-trust-val">NĐ 288/2025</span>
+            <span class="specs-trust-lbl">Cơ chế hiệp đồng Bộ QP</span>
+          </div>
+        </div> -->
+
+        <div class="section-head">
+          <span class="eyebrow eyebrow-orange">Khủng hoảng Hiện trường & Lời giải Công nghệ</span>
+          <h2 class="section-title">4 Rào cản Chí mạng Trong Ứng cứu Ngập Lũ</h2>
+          <p class="section-sub">
+            Khi bão lũ dâng cao, phương thức quan trắc và tiếp cận truyền thống bộc lộ những khoảng trống sinh tử. Dịch vụ S0143 của GASCOLAE phá vỡ sự cô lập bằng công nghệ đường không tự động.
+          </p>
+        </div>
+
+        <!-- 4 Problem & Solution Cards (Bento Matrix) -->
+        <div class="crisis-grid">
+          <!-- Card 1 -->
+          <div class="crisis-card">
+            <div class="crisis-media">
+              <img src="../assets/images/crisis_cloudy_satellite.jpg" alt="Vệ tinh bị mây mù che khuất" loading="lazy">
+              <div class="crisis-media-overlay">
+                <span class="crisis-tag alert">THÁCH THỨC 01</span>
+                <div class="crisis-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                </div>
+              </div>
+            </div>
+            <div class="crisis-body">
+              <h3 class="crisis-card-title">Thiếu thông tin hiện trường nhanh và chi tiết</h3>
+              <p class="crisis-card-desc">
+                Dữ liệu viễn thám vệ tinh bị mây mù che khuất, trạm quan trắc cố định thưa thớt hoặc bị mất điện, không cập nhật kịp thời sự thay đổi nhanh của hiện trường lũ cục bộ.
+              </p>
+              <div class="solution-resolution-box">
+                <span class="sol-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  LỢI ÍCH TÁC CHIẾN TỪ GASCOLAE
+                </span>
+                <p class="sol-text">
+                  UAV bay tầm thấp dưới mây, thu thập ảnh độ phân giải centimet và truyền luồng trực tiếp ngay trong mưa gió, cung cấp dữ liệu tức thì cho trung tâm chỉ huy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="crisis-card">
+            <div class="crisis-media">
+              <img src="../assets/images/crisis_swirling_currents.jpg" alt="Dòng lũ dữ chia cắt đường giao thông" loading="lazy">
+              <div class="crisis-media-overlay">
+                <span class="crisis-tag alert">THÁCH THỨC 02</span>
+                <div class="crisis-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                </div>
+              </div>
+            </div>
+            <div class="crisis-body">
+              <h3 class="crisis-card-title">Khó tiếp cận khu vực ngập lụt, chia cắt</h3>
+              <p class="crisis-card-desc">
+                Giao thông đường bộ và đường thủy bị cô lập hoàn toàn; dòng nước xoáy, bãi đá ngầm và chướng ngại vật trôi nổi gây nguy hiểm tính mạng cho lực lượng tiếp cận.
+              </p>
+              <div class="solution-resolution-box">
+                <span class="sol-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  LỢI ÍCH TÁC CHIẾN TỪ GASCOLAE
+                </span>
+                <p class="sol-text">
+                  Khắc phục trở ngại chia cắt địa hình: Thiết bị bay không người lái tiếp cận mọi tọa độ hiểm trở mà không mạo hiểm tính mạng của cán bộ chiến sĩ.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="crisis-card">
+            <div class="crisis-media">
+              <img src="../assets/images/crisis_submerged_roads.jpg" alt="Đường xá ngập sâu mất dấu lộ trình an toàn" loading="lazy">
+              <div class="crisis-media-overlay">
+                <span class="crisis-tag alert">THÁCH THỨC 03</span>
+                <div class="crisis-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="crisis-body">
+              <h3 class="crisis-card-title">Khó xác định phạm vi, độ sâu và tuyến đường an toàn</h3>
+              <p class="crisis-card-desc">
+                Thiếu dữ liệu không gian thực tế để biết chính xác độ sâu ngập, các tuyến đường bị chia cắt và hướng sơ tán an toàn cho phương tiện di tản dân cư.
+              </p>
+              <div class="solution-resolution-box">
+                <span class="sol-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  LỢI ÍCH TÁC CHIẾN TỪ GASCOLAE
+                </span>
+                <p class="sol-text">
+                  Tích hợp AI & DEM/DSM mô phỏng độ sâu ngập lụt, tự động vạch tuyến đường thoát hiểm an toàn và hỗ trợ điều phối xuồng cứu sinh hiệu quả.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="crisis-card">
+            <div class="crisis-media">
+              <img src="../assets/images/crisis_night_search.jpg" alt="Người dân mắc kẹt trên mái nhà trong đêm mưa bão" loading="lazy">
+              <div class="crisis-media-overlay">
+                <span class="crisis-tag alert">THÁCH THỨC 04</span>
+                <div class="crisis-icon-badge">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+              </div>
+            </div>
+            <div class="crisis-body">
+              <h3 class="crisis-card-title">Chậm trễ phát hiện người mắc kẹt</h3>
+              <p class="crisis-card-desc">
+                Quan sát thủ công bằng mắt thường rất khó xác định kịp thời vị trí nạn nhân mắc kẹt trên mái nhà, ngọn cây trong đêm tối mưa bão để ưu tiên cứu trợ khẩn cấp.
+              </p>
+              <div class="solution-resolution-box">
+                <span class="sol-label">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  LỢI ÍCH TÁC CHIẾN TỪ GASCOLAE
+                </span>
+                <p class="sol-text">
+                  Camera nhiệt Radiometric Thermal xuyên thấu đêm tối và sương mù dày, phát hiện chính xác thân nhiệt người mắc kẹt và khóa tọa độ GPS dã chiến.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 Overview Banner & Legal Disclaimer -->
+        <div class="solution-callout-banner">
+          <div class="callout-header">
+            <span class="pulse-dot"></span>
+            <h3 class="callout-title">Giải pháp Toàn diện Lấy UAV Làm Trung Tâm</h3>
+          </div>
+          <p class="callout-body">
+            GASCOLAE cung cấp giải pháp lấy thiết bị bay không người lái (UAV) làm trung tâm để giám sát khu vực lũ, thu thập ảnh và dữ liệu hiện trường độ phân giải cao trong thời gian ngắn. Dữ liệu sau đó được xử lý tự động bằng AI và GIS nhằm xác định phạm vi ngập, ước tính độ sâu/thể tích ngập, đánh giá khu vực bị ảnh hưởng, xác định tuyến đường an toàn và khoanh vùng các điểm cần ưu tiên cứu hộ. Hệ thống hỗ trợ truyền luồng video/ảnh nhiệt thời gian thực và trong cấu hình phù hợp có thể trực tiếp hỗ trợ giao vật tư khẩn cấp (phao cứu sinh tự bung, thuốc men, thiết bị liên lạc) đến các điểm cô lập.
+          </p>
+          <div class="callout-legal-disclaimer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            <div>
+              <strong>Lưu ý Pháp lý & Phạm vi Trách nhiệm:</strong> Dịch vụ đóng vai trò cung cấp dữ liệu hiện trường khách quan hỗ trợ cơ quan chỉ huy ra quyết định; không thay thế quyền ra quyết định hoặc quyền chỉ huy cứu nạn của cơ quan nhà nước có thẩm quyền; không trực tiếp thực hiện công tác cứu nạn thể chất dưới nước.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. INTERACTIVE DUAL-VISION & FLOOD DEPTH SIMULATOR (ĐỘT PHÁ THIẾT KẾ)
+         ====================================================================== -->
+    <section id="mo-phong" class="section simulator-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Công cụ Trực quan Hóa Tác chiến</span>
+          <h2 class="section-title">Bảng Điều Khiển Mô Phỏng Hiện Trường Lũ</h2>
+          <p class="section-sub">
+            Trải nghiệm khả năng phân tích dữ liệu viễn thám: Chuyển đổi giữa chế độ quang học RGB vs. ảnh nhiệt FLIR định vị nạn nhân, và mô phỏng bản đồ độ sâu ngập DEM.
+          </p>
+        </div>
+
+        <div class="simulator-container">
+          <!-- Console Header Tabs -->
+          <div class="simulator-console-header">
+            <div class="console-title-group">
+              <span class="pulse-dot"></span>
+              <span class="console-status-indicator">CONSOLE ĐIỀU HÀNH DÃ CHIẾN: TÍCH HỢP AI & GIS</span>
+            </div>
+            <div class="simulator-tabs">
+              <button class="sim-tab-btn active" data-tab="tab-vision">
+                1. Kính ngắm Kép: Quang học & Ảnh nhiệt FLIR
+              </button>
+              <button class="sim-tab-btn" data-tab="tab-depth">
+                2. Mô phỏng 3D Độ sâu Ngập (DEM/DSM)
+              </button>
+            </div>
+          </div>
+
+          <!-- Console Body -->
+          <div class="simulator-body">
+            <!-- TAB 1: DUAL-VISION SLIDER -->
+            <div class="sim-view-panel active" id="tab-vision">
+              <div class="comparison-slider-wrapper" id="comparisonSlider">
+                <!-- Underneath: Thermal Infrared FLIR Image -->
+                <img src="../assets/images/thermal_sar_view.jpg" alt="Thermal FLIR Night SAR Detection" class="comparison-image-before">
+
+                <!-- Overlay Left: Optical Daylight Flood Image -->
+                <div class="comparison-overlay-after" id="overlayAfter">
+                  <img src="../assets/images/hero_drone_flood.jpg" alt="RGB Optical Flood View" class="comparison-image-after">
+                </div>
+
+                <!-- Draggable Handle -->
+                <div class="slider-handle" id="sliderHandle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 3 12 9 6"></polyline></svg>
+                </div>
+
+                <!-- Labels -->
+                <span class="slider-badge-label label-optical">ẢNH QUANG HỌC RGB ZOOM (BAN NGÀY)</span>
+                <span class="slider-badge-label label-thermal">CẢM BIẾN NHIỆT FLIR 36.5°C (BAN ĐÊM)</span>
+              </div>
+
+              <!-- Telemetry Strip -->
+              <div class="sim-telemetry-strip">
+                <div class="sim-telem-item">
+                  <span class="sim-telem-lbl">Chế độ hiển thị</span>
+                  <span class="sim-telem-val">Dual-Sensor RGB + Thermal</span>
+                </div>
+                <div class="sim-telem-item">
+                  <span class="sim-telem-lbl">Phát hiện thân nhiệt</span>
+                  <span class="sim-telem-val" style="color: var(--amber-400);">Khóa 06 mục tiêu trên mái</span>
+                </div>
+                <div class="sim-telem-item">
+                  <span class="sim-telem-lbl">Độ chính xác tọa độ</span>
+                  <span class="sim-telem-val">RTK Sub-centimeter</span>
+                </div>
+                <div class="sim-telem-item">
+                  <span class="sim-telem-lbl">Điều phối ca-nô</span>
+                  <span class="sim-telem-val" style="color: #34d399;">Sẵn sàng chỉ dẫn luồng</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: FLOOD DEPTH SIMULATION DEM -->
+            <div class="sim-view-panel" id="tab-depth">
+              <div class="depth-sim-grid">
+                <!-- GIS Screen Display -->
+                <div class="depth-map-display">
+                  <img src="../assets/images/flood_depth_map.jpg" alt="3D DEM GIS Flood Depth Simulation" class="depth-map-img">
+                </div>
+
+                <!-- Depth Stage Control Box -->
+                <div class="depth-controls-card">
+                  <div>
+                    <span class="eyebrow eyebrow-orange" style="margin-bottom: 8px;">Kịch bản Nước Lũ Dâng</span>
+                    <h3 style="font-size: 18px; margin-top: 6px;">Chọn Ngưỡng Mô Phỏng DEM</h3>
+                  </div>
+
+                  <div class="depth-level-buttons">
+                    <button class="depth-btn active" data-level="0.5">
+                      <div class="depth-btn-info">
+                        <strong>Mức ngập 0.5m</strong>
+                        <span>Mép đường ngập, dòng chảy chậm</span>
+                      </div>
+                      <span class="depth-badge badge-warning">CẤP 1</span>
+                    </button>
+
+                    <button class="depth-btn" data-level="1.5">
+                      <div class="depth-btn-info">
+                        <strong>Mức ngập 1.5m</strong>
+                        <span>Chia cắt cầu dân sinh, dòng xoáy</span>
+                      </div>
+                      <span class="depth-badge badge-danger">CẤP 2</span>
+                    </button>
+
+                    <button class="depth-btn" data-level="3.0">
+                      <div class="depth-btn-info">
+                        <strong>Mức ngập 3.0m</strong>
+                        <span>Ngập nóc nhà, cô lập hoàn toàn</span>
+                      </div>
+                      <span class="depth-badge badge-critical">CẤP 3 KHẨN CẤP</span>
+                    </button>
+                  </div>
+
+                  <div class="depth-impact-box">
+                    <span class="depth-impact-title" id="depthImpactTitle">Mức ngập 0.5m — Báo động Cấp 1 (Mép đường ngập nông)</span>
+                    <p class="depth-impact-desc" id="depthImpactDesc">
+                      Mặt nước dâng ngập các rãnh thoát nước và mép đường thấp. Xe gầm cao cứu hộ và ca-nô dã chiến vẫn có thể lưu thông thận trọng. UAV tập trung quét ranh giới nước dâng để cảnh báo các hộ dân ven sông trũng.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. THE 3-PILLAR OPERATIONAL CAPABILITIES (Mục 5)
+         ====================================================================== -->
+    <section id="nang-luc" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Hệ thống Năng lực Công nghệ</span>
+          <h2 class="section-title">3 Trụ Cột Tác Chiến Khép Kín Của GASCOLAE</h2>
+          <p class="section-sub">
+            Khác biệt vượt trội với chu trình khép kín: Từ trinh sát đường không → Phân tích AI & GIS → Trực tiếp can thiệp hậu cần thả hàng cứu nạn.
+          </p>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <span class="pillar-number">TRỤ CỘT 01 // TRINH SÁT VIỄN THÁM</span>
+            <h3 class="pillar-title">Thu thập Dữ liệu Hiện trường & AI Bóc tách Mặt nước</h3>
+            <p class="pillar-desc">
+              Triển khai UAV công nghiệp bay quét tầm thấp, ghi nhận ảnh RGB siêu nét. Mô hình Computer Vision Semantic Segmentation tự động phân loại mặt nước dâng theo từng pixel.
+            </p>
+            <ul class="pillar-features-list">
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bình đồ trực giao Orthomosaic ranh giới ngập lũ</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Tự động nhận diện ranh giới nước dâng và đối tượng ưu tiên</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Truyền luồng video dã chiến tầm xa qua sóng RF độc lập</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <span class="pillar-number">TRỤ CỘT 02 // PHÂN TÍCH & ĐIỀU PHỐI</span>
+            <h3 class="pillar-title">Mô phỏng Độ sâu Ngập DEM & Dẫn đường Sơ tán An toàn</h3>
+            <p class="pillar-desc">
+              Chồng xếp lớp mặt nước AI lên Mô hình Số Độ Cao (DEM/DSM) để tính toán thể tích và độ sâu ngập, vạch ra các hướng sơ tán còn an toàn và chốt tọa độ GPS nạn nhân.
+            </p>
+            <ul class="pillar-features-list">
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lớp raster phân tầng độ sâu nước ngập cục bộ</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Camera nhiệt Radiometric FLIR phát hiện thân nhiệt ban đêm</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bản đồ GIS định tuyến cho đoàn xe cứu thương & ca-nô</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <span class="pillar-number">TRỤ CỘT 03 // CAN THIỆP HẬU CẦN</span>
+            <h3 class="pillar-title">Cơ cấu Tiếp tế Khẩn cấp & Thả Hàng Cứu Trợ Tự Động</h3>
+            <p class="pillar-desc">
+              Tích hợp cơ cấu nhả tải thông minh mang theo phao cứu sinh tự bung, thuốc men và thiết bị liên lạc tiếp tế chính xác vào các nóc nhà bị cô lập hoàn toàn giữa dòng xoáy.
+            </p>
+            <ul class="pillar-features-list">
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Phao cứu sinh tự bung khi tiếp xúc nước</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hộp thuốc sơ cứu, bông băng y tế và lương khô cao năng lượng</span>
+              </li>
+              <li class="pillar-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Thiết bị vô tuyến dã chiến duy trì liên lạc với nạn nhân</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5 Real-world Use Cases (Mục 6) -->
+        <div class="section-head text-left" style="margin-top: 40px;">
+          <span class="eyebrow eyebrow-amber">Tình huống Ứng dụng Thực tế</span>
+          <h2 class="section-title">Giải Quyết 5 Tình Huống Khẩn Cấp Điển Hình</h2>
+        </div>
+
+        <div class="usecase-grid">
+          <!-- UC 1 -->
+          <div class="usecase-card">
+            <div class="usecase-media">
+              <img src="../assets/images/flood_depth_map.jpg" alt="Giám sát phạm vi & ước tính độ sâu ngập">
+              <span class="usecase-category-badge">QUAN TRẮC DIỆN RỘNG</span>
+            </div>
+            <div class="usecase-body">
+              <h3 class="usecase-title">Giám sát phạm vi & ước tính độ sâu ngập</h3>
+              <p class="usecase-context">Nước lũ dâng nhanh, cơ quan quản lý cần nắm bức tranh phạm vi ngập diện rộng và mức ngập tại từng khu dân cư trũng.</p>
+              <div class="usecase-output-badge">
+                <strong>Đầu ra chuyển giao:</strong>
+                Bản đồ phạm vi ngập lụt (Orthomosaic) và lớp mô phỏng độ sâu ngập cục bộ.
+              </div>
+            </div>
+          </div>
+
+          <!-- UC 2 -->
+          <div class="usecase-card">
+            <div class="usecase-media">
+              <img src="../assets/images/hero_drone_flood.jpg" alt="Xác định tuyến đường bị ngập & hỗ trợ sơ tán">
+              <span class="usecase-category-badge">ĐIỀU PHỐI GIAO THÔNG</span>
+            </div>
+            <div class="usecase-body">
+              <h3 class="usecase-title">Xác định tuyến đường ngập & phân luồng sơ tán</h3>
+              <p class="usecase-context">Các trục đường chính bị chia cắt, cần chỉ dẫn thoát hiểm và phân luồng xe cứu thương, xe sơ tán dân cư an toàn.</p>
+              <div class="usecase-output-badge">
+                <strong>Đầu ra chuyển giao:</strong>
+                Bản đồ GIS các tuyến đường ngập sâu và chỉ dẫn các hướng sơ tán còn an toàn.
+              </div>
+            </div>
+          </div>
+
+          <!-- UC 3 -->
+          <div class="usecase-card">
+            <div class="usecase-media">
+              <img src="../assets/images/thermal_sar_view.jpg" alt="Tìm kiếm người mắc kẹt ban đêm">
+              <span class="usecase-category-badge">SAR BAN ĐÊM</span>
+            </div>
+            <div class="usecase-body">
+              <h3 class="usecase-title">Tìm kiếm người mắc kẹt ban đêm (SAR)</h3>
+              <p class="usecase-context">Người dân bị cô lập trên mái nhà, ngọn cây giữa dòng lũ trong đêm tối hoặc sương mù dày đặc ca-nô không nhìn thấy.</p>
+              <div class="usecase-output-badge">
+                <strong>Đầu ra chuyển giao:</strong>
+                Danh mục tọa độ GPS chính xác và ảnh/video nhiệt đối chiếu điều phối ca-nô.
+              </div>
+            </div>
+          </div>
+
+          <!-- UC 4 -->
+          <div class="usecase-card">
+            <div class="usecase-media">
+              <img src="../assets/images/drone_airdrop_rescue.jpg" alt="Hỗ trợ giao vật tư khẩn cấp bằng UAV">
+              <span class="usecase-category-badge">TIẾP TẾ SỐNG CÒN</span>
+            </div>
+            <div class="usecase-body">
+              <h3 class="usecase-title">Tiếp tế vật tư khẩn cấp bằng UAV (Gói Level 3)</h3>
+              <p class="usecase-context">Điểm cô lập hoàn toàn thuyền bè chưa vào kịp, nạn nhân kiệt sức cần tiếp tế vật tư sống còn trước khi ca-nô tới.</p>
+              <div class="usecase-output-badge">
+                <strong>Đầu ra chuyển giao:</strong>
+                Nhu yếu phẩm, phao cứu sinh tự bung, thuốc men tiếp tế tận tay người gặp nạn.
+              </div>
+            </div>
+          </div>
+
+          <!-- UC 5 -->
+          <div class="usecase-card featured-span-2">
+            <div class="usecase-media">
+              <img src="../assets/images/damage_assessment.jpg" alt="Đánh giá thiệt hại đê điều sau lũ">
+              <span class="usecase-category-badge">TÁI THIẾT SAU LŨ</span>
+            </div>
+            <div class="usecase-body">
+              <h3 class="usecase-title">Đánh giá thiệt hại & giám sát đê điều sau lũ</h3>
+              <p class="usecase-context">Nước rút, chính quyền và ban quản lý cần số liệu khách quan thống kê sạt lở đê điều, cầu cống, đường sá để báo cáo xin ngân sách tái thiết khẩn cấp.</p>
+              <div class="usecase-output-badge">
+                <strong>Đầu ra chuyển giao:</strong>
+                Báo cáo kỹ thuật trắc địa hiện trạng và bản đồ so sánh biến động sạt lở công trình sau lũ.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. OPERATIONAL WORKFLOW (6 BƯỚC SOP HIỆP ĐỒNG TÁC CHIẾN) (Mục 7)
+         ====================================================================== -->
+    <section id="quy-trinh" class="section process-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-orange">Quy trình Tác chiến Chuẩn hóa</span>
+          <h2 class="section-title">6 Giai Đoạn Triển Khai Dã Chiến & Pháp Lý</h2>
+          <p class="section-sub">
+            Quy trình SOP phản ứng nhanh được tối ưu hóa cho tình trạng khẩn cấp thiên tai, tuân thủ nghiêm ngặt quy định an toàn bay và cơ chế hiệp đồng tác chiến.
+          </p>
+        </div>
+
+        <div class="timeline-track-container">
+          <!-- Step 01 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">01</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">Tiếp nhận & Thống nhất ranh giới khảo sát</h3>
+                <!-- <span class="timeline-checkpoint-badge">TIẾP NHẬN 15 PHÚT</span> -->
+              </div>
+              <p class="timeline-desc">
+                Tiếp nhận thông tin cảnh báo, tọa độ vùng lũ từ Ban chỉ huy; thống nhất ranh giới khảo sát và các khu vực dân cư cô lập cần ưu tiên cao nhất.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">02</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">Kiểm tra an toàn & Kích hoạt Pháp lý bay khẩn cấp</h3>
+                <span class="timeline-checkpoint-badge law">NGHỊ ĐỊNH 288/2025/NĐ-CP</span>
+              </div>
+              <p class="timeline-desc">
+                Kiểm tra vùng cấm/hạn chế bay, kích hoạt cơ chế hiệp đồng tác chiến khẩn cấp phục vụ phòng chống thiên tai theo Nghị định 288/2025/NĐ-CP và chạy checklist GO/NO-GO an toàn.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">03</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">Lập kế hoạch bay & Xuất kích quét hiện trường</h3>
+                <!-- <span class="timeline-checkpoint-badge">SỨC GIÓ &lt; 12M/S</span> -->
+              </div>
+              <p class="timeline-desc">
+                Thiết lập đường bay tự động tối ưu; UAV cất cánh thu thập dữ liệu ảnh quang học RGB, ảnh nhiệt hồng ngoại và truyền luồng livestream dã chiến về trung tâm điều hành.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">04</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">AI & GIS Phân tích dữ liệu không gian dã chiến</h3>
+                <span class="timeline-checkpoint-badge">EDGE COMPUTING</span>
+              </div>
+              <p class="timeline-desc">
+                Máy chủ dã chiến chạy mô hình Semantic Segmentation bóc tách mặt nước, kết hợp mô hình số độ cao DEM/DSM mô phỏng độ sâu ngập và nhận diện chính xác vị trí nạn nhân.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">05</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">Bàn giao tác chiến & Kích hoạt thả hàng cứu trợ</h3>
+                <span class="timeline-checkpoint-badge">GÓI LEVEL 3 TÁC CHIẾN</span>
+              </div>
+              <p class="timeline-desc">
+                Chuyển giao ngay lớp bản đồ đường sơ tán an toàn và tọa độ nạn nhân cho đội xuồng ca-nô; kích hoạt cơ cấu thả phao cứu sinh tự bung và thuốc men nếu thuộc cấu hình Level 3.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="timeline-step-item">
+            <div class="timeline-node">06</div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-step-title">Bay cập nhật nước rút & Nghiệm thu hồ sơ kỹ thuật</h3>
+                <span class="timeline-checkpoint-badge">ĐÁNH GIÁ THIỆT HẠI</span>
+              </div>
+              <p class="timeline-desc">
+                Thực hiện các ca bay theo dõi nước rút hoặc đánh giá thiệt hại hạ tầng đê điều sau lũ; bàn giao trọn bộ hồ sơ GIS, dữ liệu trực giao và báo cáo kỹ thuật tổng kết.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. SERVICE LEVELS & PACKAGES (Mục 8)
+         ====================================================================== -->
+    <section id="goi-dich-vu" class="section packages-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cấp Độ Dịch Vụ</span>
+          <h2 class="section-title">Lựa Chọn Gói Khảo Sát & Cứu Nạn Phù Hợp</h2>
+          <p class="section-sub">
+            Thiết kế linh hoạt theo quy mô ngập lũ: Từ giám sát ranh giới cơ bản đến tác chiến tích hợp SAR và thả hàng cứu trợ sống còn.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Level 1 -->
+          <div class="package-card">
+            <div class="package-header">
+              <span class="package-level-tag">LEVEL 01</span>
+              <h3 class="package-title">Giám sát Lũ Cơ bản</h3>
+              <p class="package-subtitle">Basic Flood Survey</p>
+              <div class="package-price-wrap">
+                <span class="package-price">Liên hệ tư vấn</span>
+                <span class="package-price-note">(Dự toán theo diện tích)</span>
+              </div>
+            </div>
+
+            <ul class="package-features">
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>UAV công nghiệp camera RGB quang học 4K</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Thu thập dữ liệu ảnh/video hiện trường độ nét cao</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Lập bản đồ trực giao Orthomosaic ranh giới ngập lũ</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Xuất file ảnh GeoTIFF và JPG báo cáo sơ bộ</span>
+              </li>
+            </ul>
+
+            <div class="package-cta">
+              <a href="#dang-ky" class="btn btn-secondary" style="width: 100%;">Nhận Tư Vấn Level 1</a>
+            </div>
+          </div>
+
+          <!-- Level 2 (Featured) -->
+          <div class="package-card featured-package">
+            <span class="popular-badge-pill">★ PHỔ BIẾN CHO BAN CHỈ HUY PCTT</span>
+            <div class="package-header">
+              <span class="package-level-tag" style="color: var(--rescue-orange);">LEVEL 02</span>
+              <h3 class="package-title">Phân tích & Cảnh báo</h3>
+              <p class="package-subtitle">Depth & Route Analysis</p>
+              <div class="package-price-wrap">
+                <span class="package-price">Liên hệ tư vấn</span>
+                <span class="package-price-note">(Khuyến nghị cho cấp xã/huyện)</span>
+              </div>
+            </div>
+
+            <ul class="package-features">
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Bao gồm toàn bộ năng lực của Gói Level 1</strong>
+              </li>
+              <li class="pkg-feat-item highlight-orange">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>AI Semantic Segmentation bóc tách mặt nước dâng</span>
+              </li>
+              <li class="pkg-feat-item highlight-orange">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mô hình số độ cao DEM/DSM mô phỏng độ sâu ngập</span>
+              </li>
+              <li class="pkg-feat-item highlight-orange">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bản đồ GIS vạch tuyến đường sơ tán an toàn cho phương tiện</span>
+              </li>
+              <li class="pkg-feat-item highlight-orange">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Danh mục tổng hợp các điểm dân cư bị cô lập ưu tiên</span>
+              </li>
+            </ul>
+
+            <div class="package-cta">
+              <a href="#dang-ky" class="btn btn-primary" style="width: 100%;">Nhận Tư Vấn Level 2</a>
+            </div>
+          </div>
+
+          <!-- Level 3 -->
+          <div class="package-card">
+            <div class="package-header">
+              <span class="package-level-tag">LEVEL 03</span>
+              <h3 class="package-title">Cứu nạn & Hậu cần</h3>
+              <p class="package-subtitle">SAR & Logistics Response</p>
+              <div class="package-price-wrap">
+                <span class="package-price">Liên hệ tư vấn</span>
+                <span class="package-price-note">(Tác chiến khẩn cấp đặc thù)</span>
+              </div>
+            </div>
+
+            <ul class="package-features">
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Bao gồm toàn bộ năng lực của Level 1 & Level 2</strong>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Camera nhiệt Radiometric FLIR livestream thời gian thực</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hỗ trợ định vị thân nhiệt & chốt tọa độ GPS cứu nạn</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Trực tiếp thả phao cứu sinh tự bung và thuốc men khẩn cấp</span>
+              </li>
+              <li class="pkg-feat-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Báo cáo video nhật ký thả hàng và điều phối ca-nô dã chiến</span>
+              </li>
+            </ul>
+
+            <div class="package-cta">
+              <a href="#dang-ky" class="btn btn-secondary" style="width: 100%;">Nhận Tư Vấn Level 3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. STANDARDIZED DELIVERABLES (Mục 9)
+         ====================================================================== -->
+    <section class="section deliverables-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Chuẩn Hóa Kỹ Thuật</span>
+          <h2 class="section-title">7 Sản Phẩm Bàn Giao Kỹ Thuật</h2>
+          <p class="section-sub">
+            Toàn bộ dữ liệu được chuẩn hóa theo hệ quy chiếu tọa độ VN-2000, tương thích tuyệt đối với phần mềm GIS chuyên dụng của Ban Chỉ huy PCTT và các lực lượng cứu hộ.
+          </p>
+        </div>
+
+        <div class="deliverables-grid">
+          <!-- 1 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            </div>
+            <h4 class="deliverable-title">Ảnh / Video & Livestream</h4>
+            <p class="deliverable-desc">Dữ liệu quang học độ nét cao và luồng phát trực tiếp ảnh nhiệt phục vụ trinh sát hiện trường thời gian thực.</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            </div>
+            <h4 class="deliverable-title">Bản đồ Orthomosaic</h4>
+            <p class="deliverable-desc">Bình đồ ảnh trực giao độ phân giải cao đo đạc ranh giới ngập lũ toàn diện (GeoTIFF / JPG).</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h4 class="deliverable-title">Bản đồ Độ sâu & Thể tích</h4>
+            <p class="deliverable-desc">Lớp dữ liệu raster phân tầng độ sâu nước ngập cục bộ hỗ trợ đánh giá mức độ nguy hiểm theo cao trình.</p>
+          </div>
+
+          <!-- 4 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 8 12 12 16"></polyline><line x1="16" y1="12" x2="8" y2="12"></line></svg>
+            </div>
+            <h4 class="deliverable-title">GIS Tuyến Sơ Tán An Toàn</h4>
+            <p class="deliverable-desc">Lớp bản đồ nhận diện các tuyến đường bị cắt đứt và hướng dẫn lộ trình di tản dân cư còn thông suốt.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"></circle><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path></svg>
+            </div>
+            <h4 class="deliverable-title">Danh mục Tọa độ SAR</h4>
+            <p class="deliverable-desc">Bảng tổng hợp tọa độ GPS và ảnh nhiệt đối chiếu các điểm người và tài sản bị mắc kẹt khẩn cấp.</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="deliverable-card">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h4 class="deliverable-title">Nhật ký Thả Hàng Cứu Trợ</h4>
+            <p class="deliverable-desc">Báo cáo nhật ký và video ghi nhận kết quả thả phao cứu sinh, thuốc men thành công (Gói Level 3).</p>
+          </div>
+
+          <!-- 7 -->
+          <div class="deliverable-card" style="grid-column: span 2;">
+            <div class="deliverable-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h4 class="deliverable-title">Báo cáo Đánh giá Thiệt hại Sau Lũ</h4>
+            <p class="deliverable-desc">Báo cáo kỹ thuật trắc địa và bản đồ so sánh biến động sạt lở đê điều, hư hỏng hạ tầng phục vụ công tác xin phê duyệt ngân sách tái thiết của địa phương.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. WHY GASCOLAE / POSITIONING (Mục 10)
+         ====================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow eyebrow-orange">Lợi Thế Cạnh Tranh</span>
+          <h2 class="section-title">Tại Sao Lựa Chọn GASCOLAE?</h2>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card-tactical" style="display: flex; gap: 24px; align-items: flex-start;">
+            <div style="width: 54px; height: 54px; border-radius: 14px; background: rgba(255, 87, 34, 0.15); border: 1px solid var(--border-orange); color: var(--rescue-orange); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 20px; font-weight: 800; flex-shrink: 0;">01</div>
+            <div>
+              <h3 style="font-size: 19px; margin-bottom: 8px;">Định vị lấy UAV làm trung tâm</h3>
+              <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">Kết hợp trọn vẹn giữa trinh sát đường không diện rộng, phân tích số hóa bằng AI/GIS, hỗ trợ điều phối cứu nạn và trực tiếp tiếp tế hậu cần khẩn cấp.</p>
+            </div>
+          </div>
+
+          <div class="card-tactical" style="display: flex; gap: 24px; align-items: flex-start;">
+            <div style="width: 54px; height: 54px; border-radius: 14px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--cyan-400); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 20px; font-weight: 800; flex-shrink: 0;">02</div>
+            <div>
+              <h3 style="font-size: 19px; margin-bottom: 8px;">Chu trình tác chiến khép kín</h3>
+              <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">Luồng giải pháp tích hợp từ A-Z: Bay trinh sát &rarr; AI/GIS bóc tách độ sâu & phân tuyến &rarr; Camera nhiệt định vị thân nhiệt &rarr; Thả hàng cứu trợ trúng đích.</p>
+            </div>
+          </div>
+
+          <div class="card-tactical" style="display: flex; gap: 24px; align-items: flex-start;">
+            <div style="width: 54px; height: 54px; border-radius: 14px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--amber-400); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 20px; font-weight: 800; flex-shrink: 0;">03</div>
+            <div>
+              <h3 style="font-size: 19px; margin-bottom: 8px;">Tuân thủ pháp lý bay vững chắc</h3>
+              <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">Các chuyến bay kích hoạt cơ chế hiệp đồng tác chiến khẩn cấp, tuân thủ nghiêm ngặt Luật Phòng không nhân dân 49/2024/QH15 và Nghị định 288/2025/NĐ-CP.</p>
+            </div>
+          </div>
+
+          <div class="card-tactical" style="display: flex; gap: 24px; align-items: flex-start;">
+            <div style="width: 54px; height: 54px; border-radius: 14px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #34d399; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 20px; font-weight: 800; flex-shrink: 0;">04</div>
+            <div>
+              <h3 style="font-size: 19px; margin-bottom: 8px;">Vận hành độc lập Internet viễn thông</h3>
+              <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">Hệ thống trang bị mạng truyền dẫn vô tuyến tầm xa riêng biệt và máy tính biên dã chiến (Edge Computing), bảo đảm tác chiến bình thường ngay cả khi mạng di động mất điện diện rộng.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ======================================================================
+         11. FAQ ACCORDION (Mục 11)
+         ====================================================================== -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Giải Đáp Thắc Mắc</span>
+          <h2 class="section-title">Câu Hỏi Thường Gặp Về Dịch Vụ S0143</h2>
+        </div>
+
+        <div class="faq-accordion-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-trigger">
+              <h3 class="faq-question">Dịch vụ có thay thế lực lượng cứu nạn cứu hộ chuyên nghiệp không?</h3>
+              <div class="faq-icon-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                Không. Hệ thống đóng vai trò trinh sát, chỉ dẫn đường và tiếp tế khẩn cấp, cung cấp dữ liệu hỗ trợ giúp lực lượng cứu hộ chuyên nghiệp (Cảnh sát PCCC-CNCH, Quân đội) đưa ra quyết định chính xác và an toàn hơn; không thay thế quyền chỉ huy nhà nước.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3 class="faq-question">UAV có thể bay quét và thả hàng trong điều kiện trời mưa gió không?</h3>
+              <div class="faq-icon-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                Hệ thống sử dụng các dòng UAV công nghiệp đạt chuẩn kháng nước IP55 và chịu gió giật đến 12 m/s. Tuy nhiên, nếu gặp bão lớn, gió giật vượt ngưỡng an toàn hoặc sấm sét cực đoan, quy trình an toàn bắt buộc kích hoạt lệnh NO-GO để bảo toàn thiết bị.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3 class="faq-question">Bản đồ độ sâu ngập lụt được tính toán như thế nào, có chính xác không?</h3>
+              <div class="faq-icon-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                Dữ liệu độ phủ nước thu nhận từ UAV được kết hợp với mô hình số độ cao (DEM/DSM) độ phân giải cao để tính toán chênh lệch cao trình, mô phỏng ra độ sâu và thể tích ngập; luôn công bố kèm điều kiện áp dụng và biên độ sai số rõ ràng trong báo cáo.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3 class="faq-question">Bay UAV trong vùng ngập lũ có cần xin phép bay không?</h3>
+              <div class="faq-icon-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-content">
+              <p class="faq-answer-text">
+                Hoàn toàn tuân thủ pháp luật. Mọi chuyến bay đều kích hoạt cơ chế hiệp đồng tác chiến khẩn cấp phục vụ phòng chống thiên tai với Bộ Quốc phòng theo đúng quy định của Nghị định 288/2025/NĐ-CP và Luật Phòng không nhân dân số 49/2024/QH15.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. CALL TO ACTION / LEAD FORM (Mục 12)
+         ====================================================================== -->
+    <section id="dang-ky" class="section lead-form-section">
+      <div class="container">
+        <div class="form-wrapper-card">
+          <div class="text-center" style="text-align: center; margin-bottom: 28px;">
+            <span class="form-header-badge">
+              <span class="pulse-dot pulse-orange"></span> PHẢN HỒI KHẨN CẤP TRONG 15 PHÚT
+            </span>
+            <h2 class="form-title">Chủ Động Giám Sát Lũ Lụt & Sẵn Sàng Phương Án Cứu Nạn Cho Địa Phương</h2>
+            <p class="form-subtitle">
+              Điền thông tin địa bàn ngập lụt để nhận tư vấn kỹ thuật tác chiến và bảng dự toán chi tiết từ Đội ngũ Chỉ huy Hiện trường GASCOLAE.
+            </p>
+          </div>
+
+          <form class="survey-lead-form" id="surveyLeadForm">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Họ và tên <span class="required-star">*</span></label>
+                <input type="text" name="fullname" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Cơ quan / Đơn vị công tác <span class="required-star">*</span></label>
+                <input type="text" name="organization" class="form-input" placeholder="Ví dụ: Ban Chỉ huy PCTT Tỉnh..." required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Số điện thoại / Zalo <span class="required-star">*</span></label>
+                <input type="tel" name="phone" class="form-input" placeholder="09xx xxx xxx" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Địa bàn xảy ra ngập lụt (Xã/Huyện/Tỉnh) <span class="required-star">*</span></label>
+                <input type="text" name="location" class="form-input" placeholder="Ví dụ: Xã Tân Hóa, Huyện Minh Hóa, Quảng Bình" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Diện tích ước tính khảo sát (ha)</label>
+                <input type="number" name="area" class="form-input" placeholder="Ví dụ: 250">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mục tiêu ưu tiên tác chiến</label>
+                <select name="objective" class="form-select">
+                  <option value="all">Ưu tiên toàn diện: Trinh sát + SAR + Thả hàng</option>
+                  <option value="depth">Mô phỏng độ sâu ngập & Tìm đường sơ tán (Level 2)</option>
+                  <option value="sar">Tầm soát thân nhiệt nạn nhân ban đêm (Level 3 SAR)</option>
+                  <option value="survey">Khảo sát trực giao diện rộng cơ bản (Level 1)</option>
+                  <option value="infrastructure">Đánh giá sạt lở đê điều & hạ tầng sau lũ</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Ghi chú hiện trường đặc thù</label>
+              <textarea name="notes" class="form-textarea" placeholder="Mô tả sơ bộ về tình trạng dòng nước xoáy, mất điện diện rộng, điểm cô lập hoặc các yêu cầu kỹ thuật đặc thù..."></textarea>
+            </div>
+
+            <p class="form-privacy-note">
+              Thông tin tiếp nhận được bảo mật tác chiến. Đơn yêu cầu được định tuyến trực tiếp về Đội ngũ Chỉ huy Tác chiến Hiện trường & Khối Kinh doanh GASCOLAE.
+            </p>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <span>Yêu cầu Tư vấn Tác chiến & Nhận Dự toán</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Success Toast -->
+  <div class="form-toast" id="formSuccessToast">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <div>
+      <strong style="display: block; font-size: 14px;">Đã ghi nhận yêu cầu tác chiến!</strong>
+      <span style="font-size: 12.5px; color: #cbd5e1;">Chỉ huy hiện trường GASCOLAE sẽ liên hệ lại qua điện thoại trong vòng 15 phút.</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       13. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Service Identity -->
+        <div class="footer-brand-col">
+          <img src="../assets/logo/LOGO_no-bg.png" alt="GASCOLAE PLATFORM Logo" class="footer-logo-img">
+          <p class="footer-brand-desc">
+            GASCOLAE S0143 — Hệ thống giải pháp lấy UAV làm trung tâm để giám sát ngập lụt diện rộng, mô phỏng độ sâu dòng chảy bằng AI/GIS, hỗ trợ điều phối cứu nạn ban đêm và tiếp tế khẩn cấp vật tư sống còn.
+          </p>
+          <div class="footer-legal-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Nghị định 288/2025/NĐ-CP • Luật PKND 49/2024</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Về Dịch Vụ</h4>
+          <ul class="footer-links-list">
+            <li><a href="#thuc-trang" class="footer-link">Thực trạng & Lợi ích</a></li>
+            <li><a href="#mo-phong" class="footer-link">Mô phỏng Hiện trường</a></li>
+            <li><a href="#nang-luc" class="footer-link">3 Trụ cột Năng lực</a></li>
+            <li><a href="#quy-trinh" class="footer-link">Quy trình SOP 6 Bước</a></li>
+            <li><a href="#goi-dich-vu" class="footer-link">Các Gói Dịch vụ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capabilities & Tech -->
+        <div>
+          <h4 class="footer-col-title">Công Nghệ & Chuẩn</h4>
+          <ul class="footer-links-list">
+            <li><a href="#mo-phong" class="footer-link">UAV Kháng nước IP55</a></li>
+            <li><a href="#mo-phong" class="footer-link">Camera nhiệt FLIR 30Hz</a></li>
+            <li><a href="#nang-luc" class="footer-link">AI Semantic Segmentation</a></li>
+            <li><a href="#nang-luc" class="footer-link">Mô hình Số DEM/DSM</a></li>
+            <li><a href="#dang-ky" class="footer-link">Tải hàng tiếp tế tự bung</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hotlines -->
+        <div>
+          <h4 class="footer-col-title">Chỉ Huy Tác Chiến 24/7</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Hotline Khẩn cấp: 1900 888 999</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email tác chiến: response.s0143@gascolae.vn</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Văn phòng Điều hành: GASCOLAE PLATFORM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-disclaimer-note">
+          *Dịch vụ cung cấp thông tin hiện trường khách quan hỗ trợ chỉ huy ra quyết định; không thay thế quyền chỉ huy cứu nạn của cơ quan nhà nước; không thực hiện công tác cứu nạn thể chất dưới nước.
+        </p>
+        <p>&copy; 2026 GASCOLAE PLATFORM. S0143 — Automated Flood Security Monitoring & Response Solution. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Logic -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
